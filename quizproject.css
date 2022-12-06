@@ -1,0 +1,249 @@
+/* Start of Mobile/Default Version */
+
+* {
+  box-sizing: border-box;
+  width: 100%;
+  
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#fafafa;
+  height: 100%;
+  margin: 0;
+}
+
+/* Style the header */
+h1{
+  margin-left: 20px;
+}
+
+/* The grid container */
+.grid-container {
+  width: 100%;
+  display: grid;
+  
+  grid-template-areas: 
+      'header' 
+      'num'
+      'right'
+      'left' 
+      'footer1'
+	    'footer2';
+}
+
+.header {
+  width: 100%;
+  grid-area: header;
+  background-color: #0b62c5;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+  
+.numbers {
+  grid-area: num;
+  justify-content:center;  
+  align-items:center;  
+  color: black;
+  letter-spacing: auto;
+  font-size: 25px;
+  width: 100%;
+
+ }
+
+ .numbers > p {
+  text-align: center;
+ }
+
+.left,
+.right,
+.header,
+.footer1, .footer2 {
+  
+  display:grid;
+  justify-items:center;  
+  align-items:center;  
+}
+
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  
+}
+
+
+/* Style the right column */
+.right {
+  border: 10px ridge black;
+  grid-area: right;
+  background-color: #ccc;
+  width: auto;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: #11ccec;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+  grid-template-columns: 1fr 1fr;
+  min-height: 150px;;
+ height : auto;
+}
+
+.footer2 {
+  grid-area: footer2;
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+
+}
+.footer1 button{
+  border : 2px solid black; 
+  background-color: #6dd8eb75;
+ display: grid;
+ width: 100%;
+ height: 100%;
+align-items: center;
+font-size: 25px;
+margin: 10px;
+font-family: 'Zen Dots', cursive;
+}
+
+.footer1 button:hover{
+ opacity: 0.5;
+}
+
+
+#question {
+  
+  font-weight:bold;
+}
+
+
+.options{
+  margin-left: 15%;
+}
+
+
+.options button {
+  width: 70%;
+  height:50px;
+  min-width: 200px;
+   font-size:25px;
+   padding:0.4em;
+   margin-top: 15px;
+   background-color: #cccccc5e;
+   border: 1px solid rgb(116, 112, 112);
+   border-radius: 60px;
+  text-align: center;
+ 
+ 
+}
+.options button:hover{
+  cursor: pointer;
+  background-color: rgba(19, 160, 185, 0.733);
+  color: #f1f1f1;
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:#000000cc;   
+}
+
+#result {
+  display: none;
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  justify-content: center;
+  background-color: cornsilk;
+  text-align: center;
+}
+#result > h1{
+  top: 100px;
+}
+#result span{
+  font-size: 20px;
+}
+
+
+#message {
+    width:80%;
+    min-width:400px;
+    padding:20px;
+    background-color:red;
+    color:white;
+    text-align:center;
+    font-size:4em;
+    font-weight:bold;
+    /* vertically and horizontally center the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#retry{
+  width:20%; 
+  margin-top: 100px;
+}
+#result h1{
+  font-size: 50px;
+}
+#result span{
+  font-size: 30px;
+}
+
+/* end of Mobile/Default Version */
+
+
+/* Desktop Version */
+@media (min-width: 1250px) {
+	
+ .grid-container  {
+  
+    grid-template-areas: 
+      'header header header header header' 
+      'num num num num num'
+      'left left left right right' 
+      'footer1 footer1 footer2 footer2 footer2';
+      height:100%; 
+      border:3px solid red;
+    
+  }
+
+  .footer2 {
+    grid-area: footer2;
+    background-color: #f1f1f1;
+    text-align: center;
+    
+    font-size: 40px;
+  
+  }
+  .numbers{
+    letter-spacing: 50px;
+    
+  }
+  .right {
+    border: 10px ridge black;
+    grid-area: right;
+    background-color: #ccc;
+    width: auto;
+  }
+
+}/* end of Media Query / Desktop Version */
